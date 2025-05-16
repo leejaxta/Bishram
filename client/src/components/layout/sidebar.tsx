@@ -1,4 +1,3 @@
-import React from "react";
 import { MdOutlineBedroomChild } from "react-icons/md";
 import { LuHandCoins } from "react-icons/lu";
 import { BsGraphUpArrow } from "react-icons/bs";
