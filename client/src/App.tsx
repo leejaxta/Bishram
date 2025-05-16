@@ -14,7 +14,7 @@ import Roomdashboard from "./app/admin/roomdashboard";
 import Payementpage from "./app/paymentpage";
 import PaymentSuccess from "./app/paymentsuccess";
 import BookingGraph from "./app/admin/BookingGraph";
-import CurrentUsers from "./app/admin/CurrentUsers";
+import CurrentUsers from "./app/admin/currentUsers";
 import Unauthorized from "./app/Unauthorized";
 import Attraction from "./app/attraction";
 import RoomCleaning from "./app/admin/RoomCleaning";
