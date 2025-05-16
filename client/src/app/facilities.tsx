@@ -1,6 +1,6 @@
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { API_URL } from "@/constants/baseUrl";
 
 interface Facility {
