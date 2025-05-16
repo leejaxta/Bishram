@@ -19,6 +19,12 @@ const Paymentpage = () => {
     : "N/A";
   const perNightPrice = nights > 0 ? totalPrice / nights : totalPrice;
 
+  // Get the base URL dynamically from the current window location
+  const getBaseUrl = () => {
+    // This will give you something like "http://localhost:5173" or "https://your-app.onrender.com"
+    return `${window.location.protocol}//${window.location.host}`;
+  };
+
   const handleEsewaPayment = (amount: number) => {
     if (!amount || amount <= 0) {
       alert("Invalid amount for payment");
@@ -31,6 +37,8 @@ const Paymentpage = () => {
     const taxAmount = 0;
     const totalAmount = amount + taxAmount;
     const signedFieldNames = "total_amount,transaction_uuid,product_code";
+    
+    const baseUrl = getBaseUrl();
 
     // Generate eSewa signature
     const signature = CryptoJS.HmacSHA256(
@@ -51,8 +59,8 @@ const Paymentpage = () => {
       product_code: productCode,
       product_service_charge: 0,
       product_delivery_charge: 0,
-      success_url: `http://localhost:5173/paymentsuccess/${roomId}/${formattedCheckInDate}/${formattedCheckOutDate}/${adults}/${children}/`,
-      failure_url: `http://localhost:5173/paymentfailure/`,
+      success_url: `${baseUrl}/paymentsuccess/${roomId}/${formattedCheckInDate}/${formattedCheckOutDate}/${adults}/${children}/`,
+      failure_url: `${baseUrl}/paymentfailure/`,
       signed_field_names: signedFieldNames,
       signature: signature,
     };
