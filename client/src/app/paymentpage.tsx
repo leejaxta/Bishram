@@ -1,5 +1,4 @@
 import Navbar from "@/components/layout/navbar";
-import React from "react";
 import Footer from "@/components/layout/footer";
 import { useLocation, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
