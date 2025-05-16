@@ -218,7 +218,7 @@ export default function BookingGraph() {
             {/* Header Section */}
             <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
               <h1 className="text-2xl font-semibold text-gray-800">
-                Daily Bookings Analytics
+                Bookings Analytics
               </h1>
               <Button
                 variant="outline"
