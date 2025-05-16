@@ -1,7 +1,7 @@
 import Navbar from "@/components/layout/navbar";
 import Sidebar from "@/components/layout/sidebar";
 import { API_URL } from "@/constants/baseUrl";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface CurrentStay {
   checkIn: string;
